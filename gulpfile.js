@@ -10,9 +10,9 @@ var tag_version = require('gulp-tag-version');
 gulp.task('default', ["test"]);
 
 gulp.task('minify', function () {
-    gulp.src('ng-device-detector.js')
+    gulp.src('./lib/dist/ng-device-detector.js')
         .pipe(uglify())
-        .pipe(concat("ng-device-detector.min.js"))
+        .pipe(concat("./lib/dist/ng-device-detector.min.js"))
         .pipe(gulp.dest('.'))
 });
 
