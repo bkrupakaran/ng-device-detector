@@ -33,7 +33,7 @@ ui.use(require('ng-device-detector'));
 Everything you need is already minified
 node_modules/ng-device-detector/dist/ng-device-detector.min.js
 
-As soon as you've got the file included in your page you just need to declare a dependency on the iui.table module:
+As soon as you've got the file included in your page you just need to declare a dependency on the ng-device-detector module:
 angular.module('myModule', ['deviceDetector']);
 
 ## Build
