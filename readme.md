@@ -1,19 +1,6 @@
 #ng-device-detector
 ##Angular module to detect OS / Browser / Device
 
-[![Build Status](https://travis-ci.org/srfrnk/ng-device-detector.svg?branch=master)](https://travis-ci.org/srfrnk/ng-device-detector)
-
-Uses user-agent to set css classes or directly usable via JS.
-See website: [http://srfrnk.github.io/ng-device-detector](http://srfrnk.github.io/ng-device-detector)
-
-### Install
-* Run $ bower install ng-device-detector --save
-* Add script load to HTML:`<script type="text/javascript" src=".../re-tree.js"></script>`
-* Add script load to HTML:`<script type="text/javascript" src=".../ng-device-detector.js"></script>`
-* Add module to your app dependencies: `...angular.module("...", [..."ng.deviceDetector"...])...`
-* To add classes - add directive like so- `<div ... device-detector ...>`
-* To use directly add `"deviceDetector"` service to your injectors...
-
 ### deviceDetector service
 Holds the following properties:
 * raw : object : contains the raw values... for internal use mostly.
@@ -21,17 +8,39 @@ Holds the following properties:
 * browser : string : name of current browser
 * device : string : name of current device
  
-### Support
-At first I added just major browser, OS, device support.
-With help from mariendries,javierprovecho and crisandretta more support was added.
-[The current list of supported browser,OS, device can be easily viewed in here] (https://github.com/srfrnk/ng-device-detector/blob/master/ng-device-detector.js).
 
-Pull-requests with new stuff will be highly appreciated :)
+## Setup
 
-### Example
+Add to package.json:
+```javascript
+"dependencies": {
+    ...
+    "ng-device-detector": "git+ssh://git@github.com:bkrupakaran/ng-device-detector.git"
+}
+```
 
-See [plunker](http://plnkr.co/edit/urqMI1?p=preview)
 
-### License
+## Installation (with Influence Health pridict ui)
 
-[MIT License](//github.com/srfrnk/ng-device-detector/blob/master/license.txt)
+Use in app.js:
+```javascript
+ui.use(require('ng-device-detector'));
+```
+
+
+## Installation (without ui-core / typical)
+
+Everything you need is already minified
+node_modules/ng-device-detector/dist/ng-device-detector.min.js
+
+As soon as you've got the file included in your page you just need to declare a dependency on the iui.table module:
+angular.module('myModule', ['deviceDetector']);
+
+## Build
+**Note:** if you make changes, you must run **gulp** to rebuild the combined files in the 'dist' directory. You may need to also update the package.json version number.
+
+## Changelog
+
+### 1.0.0
+
+Created ng-device-detector repo
