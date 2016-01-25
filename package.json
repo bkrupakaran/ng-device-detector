@@ -41,6 +41,6 @@
   },
   "homepage": "https://github.com/bkrupakaran/ng-device-detector",
   "dependencies": {
-    "re-tree": "~0.0.2"
+    "re-tree": "git+ssh://git@github.com:bkrupakaran/re-tree.git"
   }
 }
